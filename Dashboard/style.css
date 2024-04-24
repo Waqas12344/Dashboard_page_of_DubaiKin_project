@@ -1,0 +1,303 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* ========Navbar========= */
+.navbar {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  background-color: rgba(255, 255, 255, 1);
+  align-items: center;
+  margin-bottom: 3px;
+}
+
+.navleft {
+  width: 20%;
+}
+
+.navleft-content {
+  display: flex;
+  align-items: center;
+  height: 89px;
+  margin: auto;
+  width: 90%;
+}
+.navleft-content-mobile {
+  display: none;
+}
+
+.navleft-content h5 {
+  font-size: 16px;
+  font-family: sans-serif, "inter";
+}
+
+.navleft-content i {
+  margin-left: 60px;
+}
+
+.navleft-content img {
+  width: 50px;
+  border-radius: 50%;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.navright {
+  width: 80%;
+}
+
+.navright-content {
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+}
+
+.navright-input {
+  margin-left: 10px;
+}
+
+.navright-input i {
+  color: rgba(47, 128, 237, 1);
+  margin-left: 6px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.navright-input input {
+  border: none;
+  outline: none;
+  font-size: 18px;
+  font-weight: 200;
+}
+
+/* =======Main======= */
+.main {
+  width: 100%;
+  height: 89vh;
+  background-color: rgb(240, 240, 240);
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ====sidebar===== */
+.sidebar {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.upperdiv {
+  width: 100%;
+  height: 80vh;
+}
+
+.upperdiv-pages {
+  width: 89%;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.page {
+  width: 95%;
+  height: 40px;
+  margin: 5px auto;
+  justify-content: space-between;
+}
+
+.page a:hover {
+  background-color: rgb(194, 218, 249);
+}
+
+.page a {
+  display: flex;
+  height: 100%;
+  border-radius: 10px;
+  text-decoration: none;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.87);
+  text-align: center;
+  font-family: sans-serif, "inter";
+}
+
+.page a:hover {
+  color: rgba(237, 138, 44, 1);
+}
+
+.page i {
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+.page p {
+  font-size: 15px;
+  margin-left: 20px;
+}
+
+.lowerdiv {
+  width: 100%;
+  height: 10vh;
+}
+
+.lowerdiv-content {
+  width: 70%;
+  margin: auto;
+  height: 80%;
+
+  text-align: center;
+}
+
+.lowerdiv-content img {
+  width: 60%;
+
+  margin: auto;
+}
+.rightbar {
+  width: 79.5%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 1);
+  overflow: scroll;
+}
+
+@media (max-width: 968px) {
+  /* ========Navbar========= */
+  .navleft-content h5 {
+    font-size: 10px;
+  }
+
+  .navleft-content i {
+    margin-left: 40px;
+  }
+
+  .navleft-content img {
+    width: 40px;
+    margin-left: 7px;
+    margin-right: 7px;
+  }
+
+  .navright-input i {
+    font-size: 18px;
+  }
+
+  /* ====sidebar===== */
+
+  .upperdiv {
+    width: 100%;
+    height: 73vh;
+  }
+
+  .upperdiv-pages {
+    width: 80%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .page {
+    width: 95%;
+    height: 40px;
+    margin: 5px auto;
+    justify-content: space-between;
+  }
+
+  .page a:hover {
+    background-color: rgb(194, 218, 249);
+  }
+
+  .page a {
+    display: flex;
+    border-radius: 10px;
+    text-decoration: none;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.87);
+    text-align: center;
+    font-family: sans-serif, "inter";
+  }
+
+  .page a:hover {
+    color: rgba(47, 128, 237, 1);
+  }
+
+  .page i {
+    font-size: 9px;
+    margin-left: 15px;
+  }
+
+  .page p {
+    font-size: 13px;
+    margin-left: 20px;
+  }
+
+  .lowerdiv {
+    width: 100%;
+    height: 15vh;
+  }
+
+  .lowerdiv-content {
+    width: 70%;
+    margin: auto;
+    height: 80%;
+
+    text-align: center;
+  }
+
+  .lowerdiv-content img {
+    width: 60%;
+
+    margin: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .navleft-content i {
+    display: none;
+  }
+
+  .navleft-content img {
+    width: 30px;
+  }
+  .navleft-content-mobile {
+    display: block;
+    align-items: center;
+    width: 100%;
+  }
+  .page p {
+    display: none;
+  }
+  .page i {
+    font-size: 20px;
+  }
+  .navleft-content-mobile i {
+    width: 60px;
+    margin-left: 25px;
+  }
+  .sidebar {
+    width: 15%;
+  }
+  .lowerdiv {
+    width: 100%;
+    height: 15vh;
+  }
+
+  .lowerdiv-content {
+    width: 90%;
+
+    height: 80%;
+  }
+
+  .lowerdiv-content img {
+    width: 95%;
+  }
+  .lowerdiv-content p {
+    font-size: 9px;
+  }
+  .rightbar {
+    width: 84.5%;
+  }
+}

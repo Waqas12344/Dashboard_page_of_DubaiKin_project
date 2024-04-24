@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+    <title>Dashboard Home page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<style>
+    .rightbar-button {
+        width: 95%;
+        margin: auto;
+    }
+
+    .rightbar-button button {
+        float: right;
+        width: 140px;
+        height: 40px;
+        text-align: center;
+        background-color: rgba(39, 174, 96, 1);
+        border-radius: 10px;
+        color: white;
+
+
+    }
+
+    .rightbar-charts {
+        display: flex;
+        flex-wrap: wrap;
+        width: 95%;
+        margin: 50px auto;
+        justify-content: space-between;
+    }
+
+    .chart {
+        width: 47%;
+        height: 370px;
+        border-radius: 10px;
+        background-color: rgba(237, 138, 44, 1);
+        margin: 6px;
+        box-shadow: 0 3px 1px 1px black;
+
+    }
+
+    .chart .heading {
+        width: 96%;
+        margin: 10px auto;
+    }
+
+    .chart .heading p {
+        font-size: 22px;
+        font-weight: 500;
+        font-family: sans-serif, 'inter';
+    }
+
+    .chart canvas {
+        width: 100%;
+        height: 80%;
+
+    }
+
+
+
+    @media(max-width:768px) {
+        .rightbar-charts {
+            display: block;
+        }
+
+        .chart {
+            width: 90%;
+            margin: 13px auto;
+
+        }
+    }
+</style>
+
+<body>
+
+    <div class="navbar">
+        <div class="navleft">
+            <div class="navleft-content">
+                <img src="img/icon.jpg" alt="">
+                <h5>Jan S.</h5>
+                <i class="bi bi-caret-down-fill"></i>
+            </div>
+        </div>
+        <div class="navright">
+            <div class="navright-content">
+                <div class="navright-input">
+                    <i class="bi bi-search"></i>
+                    <input type="text" placeholder="Quick Search">
+                </div>
+                <div class="navright-notification">
+                    <i class="bi bi-bell-fill" style="color: rgba(47, 128, 237, 1);"></i>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="main">
+        <div class="sidebar">
+            <div class="upperdiv">
+                <div class="upperdiv-pages">
+                    <div class="page">
+                        <a href="index.html">
+                            <i class="bi bi-ui-checks-grid"></i>
+                            <p>Dashboard</p>
+                        </a>
+                    </div>
+                    <div class="page">
+                        <a href="peoples.html">
+                            <i class="bi bi-people-fill"></i>
+                            <p>Peoples</p>
+                        </a>
+                    </div>
+                    <div class="page">
+                        <a href="Transfer.html">
+                            <i class="bi bi-clipboard-data-fill"></i>
+                            <p>Transfer Rate</p>
+                        </a>
+                    </div>
+                    <div class="page">
+                        <a href="calander.html">
+                            <i class="bi bi-calendar-week"></i>
+                            <p>Calander</p>
+                        </a>
+                    </div>
+                    <div class="page">
+                        <a href="transcation.html">
+                            <i class="bi bi-tv-fill"></i>
+                            <p>Transcations</p>
+                        </a>
+                    </div>
+                    <div class="page">
+                        <a href="fee.html">
+                            <i class="bi bi-hourglass"></i>
+                            <p>Fee</p>
+                        </a>
+                    </div>
+                    <div class="page">
+                        <a href="currency.html">
+                            <i class="bi bi-currency-exchange"></i>
+                            <p>Currency Setup</p>
+                        </a>
+                    </div>
+                    <div class="page">
+                        <a href="setting.html">
+                            <i class="bi bi-gear-fill"></i>
+                            <p>Setting</p>
+                        </a>
+                    </div>
+                    <div class="page">
+                        <a href="help.html">
+                            <i class="bi bi-question-lg"></i>
+                            <p>help</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="lowerdiv">
+                <div class="lowerdiv-content">
+                    <img src="img/logo.jpeg" alt="">
+                    <p>Version: 1.0.0.11</p>
+                </div>
+            </div>
+        </div>
+        <div class="rightbar">
+            <div class="rightbar-button">
+                <button><i class="bi bi-plus"></i>ADD WIDGET</button>
+            </div>
+            <div class="rightbar-charts">
+
+                <div class="chart">
+                    <div class="heading">
+                        <p>Transaction</p>
+                    </div>
+
+                    <canvas id="myChart"></canvas>
+                </div>
+                <div class="chart">
+                    <div class="heading">
+                        <p>Transaction</p>
+                    </div>
+
+                </div>
+                <div class="chart">
+                    <div class="heading">
+                        <p>Transaction</p>
+                    </div>
+
+                </div>
+                <div class="chart">
+                    <div class="heading">
+                        <p>Transaction</p>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
+        var yValues = [55, 49, 44, 24, 15];
+        var barColors = [
+            "#b91d47",
+            "#00aba9",
+            "#2b5797",
+            "#e8c3b9",
+            "#1e7145"
+        ];
+
+        new Chart("myChart", {
+            type: "doughnut",
+            data: {
+                labels: xValues,
+                datasets: [{
+                    backgroundColor: barColors,
+                    data: yValues
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: "World Wide Transcation Rate"
+                }
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>
